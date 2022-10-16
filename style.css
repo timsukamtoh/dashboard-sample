@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    overflow: auto;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(5,1fr);
+    height: 100vh;
+    width: 100vw;
+}
+
+.sidebar {
+    grid-column: 1/2;
+    grid-row: 1/6;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    justify-items: center;
+    gap: 30px;
+    padding: 20px;
+    background-color: rgb(17, 169, 230);
+    color: white;
+    font-weight: bolder;
+    
+}
+.icon{
+    max-width: 50px;
+    max-height: 50px;
+    justify-self: center;
+}
+.logo {
+    display: flex;
+    flex-direction: row;
+    padding: 15px 18px;
+    gap: 20px;
+    font-size: 30px;
+    
+}
+.nav-group{
+    padding: 20px 18px;
+    display: grid;
+    grid-template:  repeat(auto-fit, 30px)  / 1fr 4fr;
+    column-gap: 5px;
+    align-content: center;
+    justify-content: center;
+    row-gap: 10px;
+    column-gap: 20px;
+}
+
+.header{
+    grid-column: 2/6;
+    grid-row: 1/2;
+    position: relative;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    font-weight: bold;
+    padding: 12px 36px;
+    box-shadow: 2px 2px 5px rgb(175, 175, 175);
+}
+.upper-header {
+    grid-row: 1/2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.search{
+    display: flex;
+    gap: 16px;
+}
+.search input{
+    border-radius: 12px;
+    height: 3vh;
+    width: 30vw;
+    border: none;
+    background-color: rgb(205, 222, 228);
+}
+.personal {
+    display: flex;
+    gap: 32px;
+    width: 16vw;
+    justify-content: center;
+    align-items: center;
+}
+.profile-img{
+    max-width: 50px;
+    border-radius: 50%;
+}
+
+
+.lower-header {
+    grid-row: 2/3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.greeting {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 3fr;
+    grid-template-areas: "mainimg hi hi hi" "mainimg name name name";
+    column-gap: 16px;
+}
+.greeting #main-img {
+    justify-self: flex-end;
+    max-width: 75px;
+    grid-area: mainimg;
+}
+.greeting .hello {
+    align-self: flex-end;
+    font-size: small;
+    grid-area: hi;
+}
+.greeting .name {
+    align-self: flex-start;
+    font-size: x-large;
+    grid-area: name;
+}
+.actions {
+    display: flex;
+    gap: 24px;
+}
+.actions > button {
+    width: 6vw;
+    height: 4.5vh;
+    color: white;
+    border: none;
+    font-weight: bold;
+    background-color: rgb(17, 169, 230);
+    border-radius: 24px;
+}
+
+
+.main{
+    grid-column: 2/6;
+    grid-row: 2/6;
+    background-color: rgb(198, 216, 223);
+    display: grid;
+    grid-template: 1fr /3fr 1fr;
+}
+.projects{
+    grid-column: 1/4;
+    display: grid;
+    grid-template: 1fr 9fr/1fr;
+}
+.section-title{
+    grid-row: 1/2;
+    display: grid;
+    grid-template: repeat(9,1fr)/1fr 1fr;
+}
+.project-card{
+    position: relative;
+}
+
